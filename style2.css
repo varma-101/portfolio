@@ -1,30 +1,10 @@
-#hov1:hover
-{
-    color: #748CAB;
-}
-
-#hov2:hover
-{
-    color: #748CAB;
-}
-
-#hov3:hover
-{
-    color: #748CAB;
-}
-
-#hov4:hover
-{
-    color: #748CAB;
-}
-
+/*body*/
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 .iconimg
 {
     position: relative;
@@ -33,8 +13,15 @@ body {
     
 }
 
+
+/*navbar*/
+#hov:hover
+{
+    color: #94A684;
+}
+
 nav {
-    background-color: #636059;
+    background-color: #E4E4D0;
     padding: 1rem 0;
 
 }
@@ -45,7 +32,7 @@ nav .navbar-brand {
 }
 
 nav .navbar-brand span {
-    color: #748CAB;
+    color: #94A684;
 }
 
 nav .navbar-toggler {
@@ -90,7 +77,7 @@ nav .navbar-nav .nav-link {
     left: 0;
     right: 0;
     height: 3px;
-    background-color: #748CAB;
+    background-color: #94A684;
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.3s ease-in-out 0s;
@@ -108,11 +95,11 @@ nav .navbar-nav .nav-link {
 }
 
 
+/*home section*/
 #Main
 {
     background-color: black;
-    background-image: url(./images/background.jpg);
-    filter: grayscale(50%);
+    background-image: url(./images/background2.jpg);
     background-size:initial;
     position: relative;
     height: 100vh;
@@ -173,6 +160,7 @@ nav .navbar-nav .nav-link {
 #projects
 {
     height: fit-content;
+    background-color: #E4E4D0;
 }
 
 #projects .project-container
@@ -190,12 +178,12 @@ nav .navbar-nav .nav-link {
     padding-top: 3rem;
     padding-bottom: 2rem;
     font-size: 4rem;
-    color: #485563;
+    color: #3D322C;
 }
 
 .project-title h1 span{
     margin-left: 1rem;
-    color:#f5f5f5;
+    color:#94A684;
 }
 
 .all-projects
@@ -206,6 +194,7 @@ nav .navbar-nav .nav-link {
     flex-direction: column;
     padding-bottom: 3rem;
     border-radius: 0.75rem;
+    color: #94A684;
 }
 .project-item
 {
@@ -240,7 +229,7 @@ nav .navbar-nav .nav-link {
     flex-basis: 50%;
     height: 100%;
     padding: 2.8rem;
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    background-image: linear-gradient(60deg, #29323c 0%, #C3E2C2 100%);
 	color: white;
 }
 .project-info h1
@@ -269,7 +258,7 @@ nav .navbar-nav .nav-link {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	background-image: linear-gradient(60deg, #29323c 0%, #C3E2C2 100%);
 	opacity: 0.7;
 }
 #projects .project-img img {
@@ -283,11 +272,11 @@ nav .navbar-nav .nav-link {
 
 
 
-
+/*about section*/
 #about
 {
     height: 100vh;
-    
+    background-color: #E4E4D0;
 }
 #about .about
 {
@@ -300,7 +289,7 @@ nav .navbar-nav .nav-link {
     padding-top: 9rem;
 }
 .about span{
-    color: white;
+    color: #94A684;
 }
 #about .col-left {
 	width: 250px;
@@ -321,7 +310,7 @@ nav .navbar-nav .nav-link {
 {
     height: 27rem;
     width: 20rem;
-    border: 0.75rem solid #1e1e1e;
+    border: 0.75rem solid #94A684;
     padding: 1rem;
     margin: 1rem;
     margin-right: 3rem;
@@ -346,18 +335,16 @@ nav .navbar-nav .nav-link {
 	height: 100%;
 	width: 100%;
 	position: relative;
-	border: 0.75rem solid #ffffff;
+	border: 0.75rem solid #3D322C;
 }
 
 
 
-
-
-
-
+/*contact section*/
 #contact
 {
-
+    background-color: #E4E4D0;
+    color: #3D322C;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -384,13 +371,14 @@ nav .navbar-nav .nav-link {
 	justify-content: center;
 	align-items: center;
 	flex-direction: row;
-	box-shadow: 0.5rem 0.5rem 18px 0 #0000002c;
+	box-shadow: 0.5rem 0.5rem 2rem 0 #0000002c;
 	transition: 0.3s ease box-shadow;
 }
 
 .contact-item:hover
 {
-    box-shadow: 0px 0px 7px 0 #0000002c;
+    box-shadow: 0px 0px 0.5rem 0 #0000002c;
+    cursor: pointer;
 }
 
 #contact .contact-icon img{
@@ -416,11 +404,11 @@ nav .navbar-nav .nav-link {
 
 
 
-
+/*footer section*/
 .footer {
-    background-color: #333;
-    color: #fff;
-    padding-top: 20px;
+    background-color: #3D322C;
+    color: #94A684;
+    padding: 10px 0 10px 0;
     text-align: center;
     bottom: 0;
   }
@@ -429,7 +417,7 @@ nav .navbar-nav .nav-link {
     font-size: 16px;
   }
 .footer a {
-    color: #fff;
+    color: #94A684;
     text-decoration: none;
     margin: 0 10px;
   }
