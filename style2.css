@@ -416,3 +416,24 @@ nav .navbar-nav .nav-link {
 
 
 
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding-top: 20px;
+    text-align: center;
+    bottom: 0;
+  }
+.footer p {
+    margin: 0;
+    font-size: 16px;
+  }
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+.footer a:hover 
+{
+    text-decoration: underline;
+}
