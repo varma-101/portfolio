@@ -1,0 +1,418 @@
+#hov1:hover
+{
+    color: #748CAB;
+}
+
+#hov2:hover
+{
+    color: #748CAB;
+}
+
+#hov3:hover
+{
+    color: #748CAB;
+}
+
+#hov4:hover
+{
+    color: #748CAB;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.iconimg
+{
+    position: relative;
+    top: -5.25px;
+    left : 0.5rem;
+    
+}
+
+nav {
+    background-color: #636059;
+    padding: 1rem 0;
+
+}
+
+nav .navbar-brand {
+    color: #f5f5f5;
+    font-size: 1.75rem;
+}
+
+nav .navbar-brand span {
+    color: #748CAB;
+}
+
+nav .navbar-toggler {
+    border: none;
+}
+
+nav .navbar-toggler:focus {
+    outline: none;
+}
+
+nav .navbar-nav {
+    margin-left: 1rem;
+}
+
+nav .navbar-nav .nav-link {
+    color: #f5f5f5;
+    font-size: 1rem;
+    margin-right: 1rem;
+    transition: 0.3s;
+}
+
+@media (max-width: 991px) {
+    nav .navbar-collapse {
+        justify-content: center;
+    }
+
+}
+
+
+/* CSS for the glowing border */
+
+.navbar-nav .nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #f5f5f5;
+}
+
+.navbar-nav .nav-link:before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: #748CAB;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar-nav .nav-link:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+#atags
+{
+    position: absolute;
+    right: 1.875rem;
+}
+
+
+#Main
+{
+    background-color: black;
+    background-image: url(./images/background.jpg);
+    filter: grayscale(50%);
+    background-size:initial;
+    position: relative;
+    height: 100vh;
+    overflow-x:hidden;
+	z-index: 1;
+}
+
+#Main::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.3;
+	z-index: -1;
+}
+
+
+@keyframes slidein 
+{
+    from {
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }    
+}
+
+#Main h1 
+{
+    color: #748CAB;
+    position: relative;
+    line-height: 7rem;
+    top:8rem;
+    left: 7rem;
+    animation: slidein 1s ease;
+    background-image: url(./images/textbackground.jpg);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#Main h1:nth-child(1) {
+	animation: slidein 1s ease;
+}
+#Main h1:nth-child(2)  {
+	animation: slidein 2s ease;
+}
+#Main h1:nth-child(3)  {
+	animation: slidein 3.5s ease;
+}
+
+
+/*projects section*/
+#projects
+{
+    height: fit-content;
+}
+
+#projects .project-container
+{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.project-title h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    font-size: 4rem;
+    color: #485563;
+}
+
+.project-title h1 span{
+    margin-left: 1rem;
+    color:#f5f5f5;
+}
+
+.all-projects
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 3rem;
+    border-radius: 0.75rem;
+}
+.project-item
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    height: 21.875rem;
+}
+
+#projects .project-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+#projects .all-projects .project-info {
+    height: 100%;
+}
+#projects .all-projects .project-img {
+    height: 100%;
+}
+
+
+.project-info
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-basis: 50%;
+    height: 100%;
+    padding: 2.8rem;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	color: white;
+}
+.project-info h1
+{
+    font-size: 3rem;
+    font-weight: 500;
+}
+.project-info h2
+{
+    font-size: 1.8rem;
+    margin-top: 10px;
+    font-weight: 500;
+}
+.project-img img
+{
+    flex-basis: 50%;
+    height: 21.875rem;
+    overflow: hidden;
+    position: relative;
+
+}
+#projects .project-img:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: 0.7;
+}
+#projects .project-img img {
+	transition: 0.3s ease transform;
+    filter: grayscale(50%);
+}
+#projects .project-item:hover .project-img img {
+	transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+
+
+
+#about
+{
+    height: 100vh;
+    
+}
+#about .about
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+	align-items:center;
+	margin: 0 auto;
+	padding: 6.25rem 1.25rem;
+    padding-top: 9rem;
+}
+.about span{
+    color: white;
+}
+#about .col-left {
+	width: 250px;
+	height: 360px;
+    margin-right: 7.5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+#about .col-right {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+	width: 46.875rem;
+    justify-content:right;
+    align-items:center;
+}
+#about img
+{
+    height: 27rem;
+    width: 20rem;
+    border: 0.75rem solid #1e1e1e;
+    padding: 1rem;
+    margin: 1rem;
+    margin-right: 3rem;
+}
+
+.col-right h1
+{
+    font-size: 3rem;
+    font-weight: 500;
+}
+#about .col-right h2 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	margin-bottom: 10px;
+}
+#about .col-right p {
+	margin-bottom: 20px;
+}
+
+#about .col-left .about-img {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	border: 0.75rem solid #ffffff;
+}
+
+
+
+
+
+
+
+#contact
+{
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#contact .contact-items
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contact-item
+{
+    width: 80%;
+	text-align: center;
+	border-radius: 10px;
+	padding: 30px;
+	margin: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	box-shadow: 0.5rem 0.5rem 18px 0 #0000002c;
+	transition: 0.3s ease box-shadow;
+}
+
+.contact-item:hover
+{
+    box-shadow: 0px 0px 7px 0 #0000002c;
+}
+
+#contact .contact-icon img{
+	width: 70px;
+	margin-bottom: 10px;
+}
+
+.contact-info
+{
+    padding-left: 1rem;
+}
+
+#contact .contact-info h1 {
+	font-size: 2.5rem;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+#contact .contact-info h2 {
+	font-size: 1.3rem;
+	line-height: 2rem;
+	font-weight: 500;
+}
+
+
+
